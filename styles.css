@@ -273,13 +273,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: #333;
-    height: 40vh;
+    height: 85.5vh;
     width: 100%;
     display: flex;
+    align-items:center;
+    justify-content: center;
     flex-direction: row;
 }
 .hero-selection {
-    width: 70%;
+    width: 90%;
     height:100%;
     display: flex;
     flex-direction: column;
@@ -328,9 +330,10 @@ body {
 .hero-grid {
     margin-top: 1vh;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(60px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px,1fr));
     grid-auto-rows: min-content;
-    width: 98%;
+    justify-content: center;
+    width: 100%;
     gap: 0.3vw;
     overflow-y: scroll;
 }
@@ -341,9 +344,9 @@ body {
 
 
 .hero {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border-radius: 0%;
     overflow: hidden;
     position: relative;
 }
@@ -352,77 +355,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.notepad-container {
-    margin-right:0.3vw;
-    width: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing:border-box;
-}
-
-.notepad-wrapper {
-    box-sizing:border-box;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    width: 92%;
-    height: 95%;
-    align-self: center;
-    background-color: #2d2d2d;
-    padding: 1vw;
-}
-
-.notepad{
-    background-color: #2d2d2d;
-    color: #bbb;
-    resize: none;
-    outline: none;    
-    border: none;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; 
-    font-size: 1rem;
-}
-
-.notepad::placeholder {  
-    color: #717171;;
-    opacity: 1; 
-  }
-
-.notepad:focus {
-    outline: none;
-}
-.notepad::-webkit-scrollbar {
-    display: none;
-}
-
-.center-mid{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 50vh;
-    width: 100%;
-    display: flex;
-    background-color: #333;
-}
-
-.bar-chart{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 60%;
-}
-
-.radar-chart{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 40%;
 }
 
 .center-bottom{

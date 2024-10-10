@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="load.js"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Mobile Legends Pick-Ban Tool</title>
+</head>
+<body>
+    <div id="content">
+        <div class="desktop">
+            <div class="team-div">
+                <div class="wrapper"><div class="large-div2"></div></div>
+                <div class="wrapper"><div class="large-div2"></div></div>
+                <div class="wrapper"><div class="large-div2"></div></div>                
+                <div class="wrapper"><div class="large-div2"></div></div>
+                <div class="wrapper"><div class="large-div2" style ="border-bottom: 0px;"></div></div>
+                <div class="ban-div">
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                </div>
+            </div>
+            <div class="center-div">
+                <div class="center-top">
+                    <div class = "hero-selection">
+                        <div class="hero-categories">
+                            <input type="search" id="search" name="search" placeholder="SEARCH...">
+                            <button data-category="all">ALL</button>
+                            <button data-category="mage">MAGE</button>
+                            <button data-category="tank">TANK</button>
+                            <button data-category="marksman">MARKSMAN</button>
+                            <button data-category="assassin">ASSASSIN</button>
+                            <button data-category="fighter">FIGHTER</button>
+                            <button data-category="support">SUPPORT</button>
+                        </div>
+                        <div class="hero-grid">
+                            
+                        </div>
+                    </div>
+                    <div class = "notepad-container">
+                        <div class="notepad-wrapper">
+                            <textarea class = "notepad" placeholder="Notes"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="center-mid">
+                    <div class="bar-chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="radar-chart">
+                        <canvas id="myRadarChart"></canvas>
+                    </div>
+                </div>
+                <div class="center-bot">
+                    <div class="timer-container2" id="timer-container2">
+                        <div id="countdown-bar2"></div>
+                    </div>
+                    <div class="timer">
+                        <div class = "top"><button class="draft-button" id="draft-button">DRAFT!</button>
+                            <div class="triangle-left" id="blueTeamIndicator2"></div>
+                            <div id="countdown-text">30</div>
+                            <div class="triangle-right" id="redTeamIndicator2"></div>
+                        </div>
+                        <div class="bottom">
+                            <span class="bottom-text">(press 'esc' to exit draft mode)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="team-div">
+                <div class="wrapper"><div class="large-div"></div></div>
+                <div class="wrapper"><div class="large-div"></div></div>
+                <div class="wrapper"><div class="large-div"></div></div>
+                <div class="wrapper"><div class="large-div"></div></div>
+                <div class="wrapper"><div class="large-div" style ="border-bottom: 0px;"></div></div>
+                <div class="ban-div2">
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile">
+            <div class="team-div">
+                <div class="pick-div">
+                    <div class="wrapper"><div class="large-div2"></div></div>
+                    <div class="wrapper"><div class="large-div2"></div></div>
+                    <div class="wrapper"><div class="large-div2"></div></div>
+                    <div class="wrapper"><div class="large-div2"></div></div>
+                    <div class="wrapper"><div class="large-div2"></div></div>
+                </div>
+                <div class="ban-div">
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                </div>
+                <div class="triangle-container">
+                    <div class="triangle" id="blueTeamIndicator" style="border-bottom: 5px solid white;"></div>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-item" style="align-self: start;";>
+                    <div class="timer-container" id="timer-container">
+                        <div id="countdown-bar"></div>
+                    </div>
+                    <div class = "hero-selection2">
+                        <div class="hero-categories2">
+                            <input type="search" id="search2" name="search2" placeholder="SEARCH...">
+                            <div class="play-button" id="playButton"><div class="play-icon" id="icon"></div></div>
+                            <button data-category="mage" class="role-button mage"></button>
+                            <button data-category="tank" class="role-button tank"></button>
+                            <button data-category="marksman" class="role-button marksman"></button>
+                            <button data-category="assassin" class="role-button assassin"></button>
+                            <button data-category="fighter" class="role-button fighter"></button>
+                            <button data-category="support" class="role-button support"></button>
+                        </div>
+                        <div class="hero-grid2">
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <canvas id="mobileBar"></canvas>
+                </div>
+                <div class="carousel-item">
+                    <canvas id="mobileRadar1"></canvas>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+            <div class="team-div">
+                <div class="triangle-container">
+                    <div class="triangle"  id="redTeamIndicator" style="border-top: 5px solid white;"></div>
+                </div>
+                <div class="ban-div2">
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                    <div class="wrapper"><div class="small-div"></div></div>
+                </div>
+                <div class="pick-div2">
+                    <div class="wrapper"><div class="large-div"></div></div>
+                    <div class="wrapper"><div class="large-div"></div></div>
+                    <div class="wrapper"><div class="large-div"></div></div>
+                    <div class="wrapper"><div class="large-div"></div></div>
+                    <div class="wrapper"><div class="large-div"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

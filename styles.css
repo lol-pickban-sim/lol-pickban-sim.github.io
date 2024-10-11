@@ -37,9 +37,6 @@ body {
     flex-direction: row;
 }
 
-.mobile{
-    display: none;
-}
 
 .team-div{
     box-sizing: border-box;
@@ -290,37 +287,57 @@ body {
 
 .hero-categories {
     width: 100%;
+    height: 7%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
 .hero-categories input {
-    margin-top: 0.5vh;
-    padding-left: 0.5vw;
+    margin-top:0.5vh;
+    padding-left: 0.9vw;
     background-color: #2d2d2d;
     border: none;
-    border-radius: 0;
-    font-size: 0.7vw;
-    width: 4.7vw;
-    height: 2vw;
+    border-radius: 5px;
+    font-size: 1vw;
+    width: 10vw;
+    height: 3vw;
     color: #7a7a7a;
+}
+
+.hero-categories input::-webkit-search-cancel-button{
+    -webkit-appearance: none;
 }
 
 .hero-categories input:focus{
     outline: none;
 }
 
-.hero-categories button {
+.role-button{
     margin-top:0.5vh;
-    padding-left: 1vh;
-    padding-right: 1vh;
-    font-size: 0.7vw;
-    background-color: #2d2d2d;
-    color: #7a7a7a;
+    background-color: #333;
     border: none;
     cursor: pointer;
-    height: 2vw;
+    height: 3vw;
+    aspect-ratio: 1;
+    background-size: contain;
+}
+
+.role-button.jungle {
+    background-image: url('src/jungle.webp');
+}
+
+.role-button.topl {
+    background-image: url('src/top.webp');
+}
+.role-button.mid {
+    background-image: url('src/mid.webp');
+}
+.role-button.bot {
+    background-image: url('src/bot.webp');
+}
+.role-button.sup {
+    background-image: url('src/sup.webp');
 }
 
 .hero-categories button:hover {
@@ -492,528 +509,4 @@ body {
 .wrapper{
     transform: scale(1);
     align-self: center;
-}
-
-@media only screen and (max-device-width: 820px) {
-    
-    * { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
-    .mobile{
-        display:flex;
-        flex-direction: column;
-    }
-    .desktop{
-        display:none;
-    }
-    .timer-container {
-        width: 100%;
-        height: 3px;
-        background-color: #333;
-        overflow: hidden;
-        position: relative;
-        visibility: hidden;
-    }
-    
-    #countdown-bar {
-        height: 100%;
-        background-color: #ddd;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 90vh;
-        width: 100vw;
-        margin: 0;
-        padding: 0;
-        background-color: #2d2d2d;
-    }
-    
-    .carousel {
-        display: flex;
-        overflow: hidden;
-        width: 100vw;
-        height: 39vh;
-        background-color: #333; /* Ensures the background color is consistent */
-    }
-    
-    .carousel-item {
-        min-width: 100%;
-        transition: transform 0.5s ease;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .carousel-indicators {
-        height: 1vh;
-        text-align: center;
-        background-color: #333;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .dot {
-        position: relative;
-        height: 7px;
-        width: 7px;
-        background-color: #717171;
-        border-radius: 50%;
-        transition: background-color 0.3s;
-        align-self: center;
-        margin-left: 0.8vw;
-        margin-right: 0.8vw;
-        margin-bottom: 5px;
-    }
-    
-    .dot.active {
-        background-color: #bbb;
-    }
-
-    .hero-selection2 {
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .hero-categories2 {
-        margin-top: 1vh;
-        padding: 0;
-        display: flex;
-        height: 10vw;
-        width: 98vw;
-        align-self: center;
-        justify-content: space-between;
-    }
-    
-    .hero-categories2 button {
-        background-color: transparent;
-    }
-
-    .hero-categories2 input {
-        margin: 0;
-        background-color: #2d2d2d;
-        border: none;
-        padding-left: 2vw;
-        padding-right: 2vw;
-        border-radius: 0;
-        font-size: 2vw;
-        width: 17vw;
-        height: 10vw;
-        color: #7a7a7a;
-    }
-    
-    .hero-categories2 input:focus{
-        outline: none;
-    }
-
-    .role-button {
-        width: 10vw;
-        height: 10vw;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        border: none;
-        cursor: pointer;
-    }
-
-    .role-button.mage {
-        background-image: url('src/mage.webp');
-    }
-    
-    .role-button.tank {
-        background-image: url('src/tank.webp');
-    }
-    
-    .role-button.marksman {
-        background-image: url('src/marksman.webp');
-    }
-    
-    .role-button.assassin {
-        background-image: url('src/assassin.webp');
-    }
-    
-    .role-button.fighter {
-        background-image: url('src/fighter.webp');
-    }
-    
-    .role-button.support {
-        background-image: url('src/support.webp');
-    }
-
-    .play-button {
-        width: 10vw;
-        height: 10vw;
-        background-color: #2d2d2d;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        border-radius: 2px;
-    }
-    
-    .play-icon {
-        width: 0;
-        height: 0;
-        border-left: 3vw solid #7a7a7a;
-        border-top: 2vw solid transparent;
-        border-bottom: 2vw solid transparent;
-        align-self: center;
-    }
-
-    .pause-icon {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 3vw; /* Adjust width to fit the pause icon */
-        height: 3vw; /* Adjust height to fit the pause icon */
-    }
-    
-    .pause-icon::before, .pause-icon::after {
-        content: '';
-        display: block;
-        width: 1vw; /* Adjust width of each pause bar */
-        height: 100%;
-        background-color: #7a7a7a;
-    }
-
-    .hero {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        padding: 0;
-        margin: 0;
-    }
-    .hero-grid2 {
-        margin-top: 1vh;
-        padding:0;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(60px,1fr));
-        grid-auto-rows: min-content;
-        justify-content: space-evenly;
-        align-items: center;
-        align-self: center;
-        gap: 1vw;
-        width: 98vw;
-        height: 28.5vh;
-        overflow-y: scroll;
-        overflow-x: hidden;
-        -webkit-overflow-scrolling: touch; 
-    }
-
-    .hero-grid2::-webkit-scrollbar {
-        display: none;
-    }
-    .hero img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .team-div{
-        display: flex;
-        flex-direction: column;
-        align-self: center;
-        padding: 0;
-        height: 25vh;
-        width: 90vw;
-    }
-    .pick-div {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 70%;
-    }
-    .pick-div2 {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 70%;
-    }
-    .large-div2{
-        margin: 0;
-        padding: 0;
-        width: 16vw;
-        height: 14.5vh;
-        align-self: center;
-        background: linear-gradient(to bottom, #333 95%, #36A2EB 5%);
-        border-radius: 2px;
-        overflow: hidden;
-        border: 0px;
-        transition: none;
-        box-shadow: none;
-    }
-    .large-div2 img{
-        width:100%;
-        height:100%;
-        object-fit: cover;
-        position: relative;
-        animation: zoomInOut 0.5s ease forwards;
-    }
-    .remove {
-        margin: 0;
-        padding: 0;
-        font-size: x-small;
-        position: fixed;
-        top: -0.188rem; 
-        right: -0.188rem; 
-        background-color: #FF7F7F;
-        color: white;
-        border-radius: 2px;
-        width: 0.938rem;
-        height: 0.938rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    @keyframes pulse-glow-red {
-        0%, 100% {
-            box-shadow: inset 0 0 3vw rgba(255, 99, 132, 0.3), inset 0 -1vw 4vw rgba(255, 99, 132, 0.5);
-        }
-        50% {
-            box-shadow: inset 0 0 40px rgba(255, 99, 132, 0.4), inset 0 -1vw 6vw rgba(255, 99, 132, 0.7);
-        }
-    }
-
-    @keyframes pulse-glow-blue {
-        0%, 100% {
-            box-shadow: inset 0 0 3vw rgba(54, 162, 235, 0.3), inset 0 -1vw 4vw rgba(54, 162, 235, 0.5);
-        }
-        50% {
-            box-shadow: inset 0 0 4vw rgba(54, 162, 235, 0.4), inset 0 -1vw 6vw rgba(54, 162, 235, 0.7);
-        }
-    }
-
-    @keyframes pulse-glow-blue-small {
-        0%, 100% {
-            box-shadow: inset 0 0 1.5vw rgba(54, 162, 235, 0.3), inset 0 -0.5vw 2vw rgba(54, 162, 235, 0.5);
-        }
-        50% {
-            box-shadow: inset 0 0 2vw rgba(54, 162, 235, 0.4), inset 0 -0.5vw 3vw rgba(54, 162, 235, 0.7);
-        }
-    }
-
-    @keyframes pulse-glow-red-small {
-        0%, 100% {
-            box-shadow: inset 0 0 1.5vw rgba(255, 99, 132, 0.3), inset 0 -0.5vw 2vw rgba(255, 99, 132, 0.5);
-        }
-        50% {
-            box-shadow: inset 0 0 2vw rgba(255, 99, 132, 0.4), inset 0 -0.5vw 3vw rgba(255, 99, 132, 0.7);
-        }
-    }
-
-    .glow-blue{
-        box-shadow: inset 0 0 3vw rgba(54, 162, 235, 0.5), inset 0 0 60px rgba(54, 162, 235, 0.3), inset 0 0 90px rgba(54, 162, 235, 0.1);
-        animation: pulse-glow-blue 2s infinite;
-    }
-
-    .glow-blue-small{
-        box-shadow: inset 0 0 0.3vw rgba(54, 162, 235, 0.5), inset 0 0 60px rgba(54, 162, 235, 0.3), inset 0 0 90px rgba(54, 162, 235, 0.1);
-        animation: pulse-glow-blue-small 2s infinite;
-    }
-    
-    .glow-red{
-        box-shadow: inset 0 0 3vw rgba(255, 99, 132, 0.5), inset 0 0 60px rgba(255, 99, 132, 0.3), inset 0 0 90px rgba(255, 99, 132, 0.1);
-        animation: pulse-glow-red 2s infinite;
-    }
-
-    .glow-red-small{
-        box-shadow: inset 0 0 0.3vw rgba(54, 162, 235, 0.5), inset 0 0 60px rgba(54, 162, 235, 0.3), inset 0 0 90px rgba(54, 162, 235, 0.1);
-        animation: pulse-glow-red-small 2s infinite;
-    }
-
-    .large-div{
-        margin: 0;
-        padding: 0;
-        width: 16vw;
-        height: 14.5vh;
-        align-self: center;
-        background: linear-gradient(to bottom, #333 95%, #FF6384 5%);
-        border-radius: 2px;
-        overflow: hidden;
-        position: relative;
-        border: 0px;
-        box-shadow: none;
-        transition: none;
-    }
-    
-    .large-div img{
-        width:100%;
-        height:100%;
-        object-fit: cover;
-        overflow: hidden;
-        border-radius: 2px;
-        position: relative;
-        animation: zoomInOut 0.5s ease forwards;
-    }
-    .ban-div{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        align-self: center;
-        width: 80%;
-        height: 20%;
-    }
-    .ban-div2{
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
-        align-self: center;
-        width: 80%;
-        height: 20%;
-    }
-    .small-div{
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-        width: 10vw;
-        height: 10vw;
-        background: #333;
-        align-self: center;
-        border-radius: 2px;
-        position: relative;
-        overflow:visible;
-    }
-    .small-div img{
-        width:100%;
-        height:100%;
-        object-fit: fill;
-        overflow: hidden;
-        opacity: 80%;
-    }
-
-    .remove-sml {
-        margin: 0;
-        padding: 0;
-        font-size: 0.2em;
-        position: absolute;
-        top: -0.23rem;
-        right: -0.188rem; 
-        background-color: #FF7F7F;
-        color: white;
-        border-radius: 20%;
-        width: 0.625rem;
-        height: 0.625rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .ban-indicator {
-        margin: 0;
-        padding: 0;
-        position: relative;
-        width: 10vw;
-        height: 10vw;
-        background-color: transparent;
-        border-right: 1px solid whitesmoke;
-        bottom: 7.5vw;
-        right: 4vw;
-        transform: rotate(-45deg);
-    }
-
-    .wrapper{
-        transform: scale(1);
-        align-self: center;
-    }
-
-    .triangle-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 10%;
-        width: 100%;
-    }
-    .triangle {
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        visibility: hidden;
-    }
-    .notification {
-        position: fixed;
-        top: -50px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #333;
-        color: #7a7a7a;
-        padding: 10px;
-        border-radius: 2px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-        transition: top 0.5s ease-in-out;
-        z-index: 1000;
-        font-family: 'Helvetica', 'Arial', sans-serif;
-    }
-    
-    .notification.show {
-        top: 20px; 
-    }
-    
-}
-
-@media screen and (max-width: 680px){
-    .hero {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        padding: 0;
-        margin: 0;
-    }
-    .hero-grid2 {
-        margin-top: 1vh;
-        padding:0;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(50px,1fr));
-        grid-auto-rows: min-content;
-        justify-content: space-evenly;
-        align-items: center;
-        align-self: center;
-        gap: 1vw;
-        width: 98vw;
-        height: 31vh;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch; 
-    }
-}
-
-@media screen and (max-width: 480px){
-    .hero {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        overflow: hidden;
-        position: relative;
-        padding: 0;
-        margin: 0;
-    }
-    .hero-grid2 {
-        margin-top: 1vh;
-        padding:0;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(40px,1fr));
-        grid-auto-rows: min-content;
-        justify-content: space-evenly;
-        align-items: center;
-        align-self: center;
-        gap: 1vw;
-        width: 98vw;
-        height: 31vh;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch; 
-    }
 }

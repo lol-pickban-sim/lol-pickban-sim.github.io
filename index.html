@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Mobile Legends Pick-Ban Tool</title>
+    <title>League Pick-Ban Sim</title>
 </head>
 <body>
     <div id="content">
@@ -31,15 +31,16 @@
                 <div class="center-top">
                     <div class = "hero-selection">
                         <div class="hero-categories">
-                            <input type="search" id="search" name="search" placeholder="SEARCH...">
-                            <button data-category="all">ALL</button>
-                            <button data-category="mage">MAGE</button>
-                            <button data-category="tank">TANK</button>
-                            <button data-category="marksman">MARKSMAN</button>
-                            <button data-category="assassin">ASSASSIN</button>
-                            <button data-category="fighter">FIGHTER</button>
-                            <button data-category="support">SUPPORT</button>
-                        </div>
+                            <div style="height: 100%; ">                            
+                                <input type="search" id="search" name="search" placeholder="SEARCH...">
+                            </div>
+                            <div style="height: 100%; width:40%;display: flex; justify-content: space-evenly;">                            
+                                <button data-category="top" class="role-button topl"></button>
+                                <button data-category="jungle" class="role-button jungle"></button>
+                                <button data-category="mid" class="role-button mid"></button>
+                                <button data-category="bot" class="role-button bot"></button>
+                                <button data-category="sup" class="role-button sup"></button></div>
+                            </div>
                         <div class="hero-grid">
                             
                         </div>
